@@ -2,14 +2,16 @@
 <html>
 <head>
     <title>Boss Portfolio</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="haha">
 
     <!-- Boss Name -->
-    <h1>Mr. John Doe</h1>
+    <h1 style="text-align: center;">Mr. John Doe</h1>
 
     <!-- Boss Position -->
-    <h2>CEO of Private Firm</h2>
+    <h2 style="text-align: center;">CEO of Private Firm</h2>
 
     <!-- Internal Navigation Links -->
     <nav>
@@ -18,9 +20,11 @@
         <a href="#skills">Skills</a> |
         <a href="#projects">Projects</a> |
         <a href="#video">YouTube Video</a>
-    </nav>
+        <a href="#contact">Contact</a>
+    </nav></header>
     <hr>
 
+    <main class ="main-container">
     <!-- Introduction Section -->
     <h2 id="intro">Introduction</h2>
     <p>
@@ -31,10 +35,12 @@
     </p>
 
     <!-- Boss Image with Caption -->
+     <div class="photo" >
     <figure>
-        <img src="images.jpg" alt="Boss Image" width="300">
-        <figcaption>I'm pretty</figcaption>
+        <img src="images.jpg" alt="Boss Image"  alt="Centered Image" width="300">
+        <figcaption> Mr. John Doe — Leading with Vision, Innovation and Excellence</figcaption>
     </figure>
+</div>
 
     <!-- Experience Section -->
     <h2 id="experience">Experience</h2>
@@ -42,10 +48,13 @@
         <li>10 years as CEO at Private Firm</li>
         <li>5 years as Director at TechCorp</li>
         <li>3 years as Manager at Business Solutions</li>
+        <li>2 years as Business Consultant</li>
+            
     </ol>
 
     <!-- Skills Section -->
     <h2 id="skills">Skills</h2>
+    <div class="table-container">
     <table border="1">
         <tr>
             <th>Skill</th>
@@ -64,21 +73,124 @@
             <td>8</td>
         </tr>
     </table>
+    </div>
 
     <!-- Projects Section -->
     <h2 id="projects">Projects</h2>
-    <ul>
-        <li>Global Expansion Project</li>
-        <li>AI Integration Initiative</li>
-        <li>Smart City Development</li>
-    </ul>
+    <div class="projects-container">
+
+                <div class="project-card">
+                    <h3>Global Expansion Project</h3>
+                    <p>
+                        Expanded the company's operations into international
+                        markets and developed new business opportunities.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>AI Integration Initiative</h3>
+                    <p>
+                        Introduced artificial intelligence technologies to
+                        improve productivity and business operations.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Smart City Development</h3>
+                    <p>
+                        Worked on innovative technology solutions to improve
+                        urban infrastructure and services.
+                    </p>
+                </div>
+
+            </div>
 
     <!-- YouTube Video Section -->
-    <h2 id="video">YouTube Video</h2>
+     <h2 id="video">YouTube Video</h2>
+     <div style="text-align:center;">
+    
     <iframe width="560" height="315" 
         src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
         frameborder="0" allowfullscreen>
     </iframe>
+    </div>
+
+     <!-- Contact Form -->
+        <section id="contact">
+            <h2>Contact / Registration Form</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role</label>
+
+                    <select id="role" name="role" required>
+                        <option value="">Select your role</option>
+                        <option value="employee">Employee</option>
+                        <option value="manager">Manager</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+</main>
 
 </body>
 </html>
